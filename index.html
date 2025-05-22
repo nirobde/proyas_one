@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyas.one</title>
+  <link rel="stylesheet" href="./css/plagin.css">
+  <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+  <!-- <style>
+  #userMenu ul {
+  scrollbar-gutter: stable both-edges;
+  direction: rtl; 
+  }
+  
+  #userMenu ul * {
+  direction: ltr; 
+   text-align: center;
+  }
+   
+  </style> -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+  rel="stylesheet">
+
+</head>
+
+<body class=" font-[poppins] transition-all content">
+<!-- nav start -->
+<!-- nav start -->
+
+<nav class="glass-panel bg-gradient-to-br from-purple-50 mb-40 sm:mb-10 via-blue-50 to-green-50 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex flex-col sm:flex-row items-center justify-between h-16 gap-4 sm:gap-0">
+
+      <!-- Left Section (Menu + Logo) -->
+      <div class="flex items-center gap-4 order-1 sm:order-none w-full sm:w-auto justify-between sm:justify-start">
+        <!-- Menu Dropdown -->
+        <div class="relative">
+          <button id="toggleBtn" class="text-black hover:text-gray-800 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+
+          
+          
+            <!-- Sidebar Overlay -->
+            <!-- <div id="sidebarOverlay"></div> -->
+          
+            <!-- Sidebar -->
+            <div id="sidebar"
+              class="fixed left-0 top-0 bg-white z-40 h-screen w-full text-center sm:text-left sm:w-64 -translate-x-full transform transition-all duration-300">
+
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                class="size-6 m-5 hover:bg-gray-200 rounded-md text-2xl">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+              </svg>
+
+              <div class="flex h-full flex-col">
+                <div class=" p-10">
+                  <img src="proyas.jpeg-removebg-preview.png" alt="" class="w-64 mx-auto">
+                </div>
+                <ul class="px-2 pt-2 pb-3 space-y-2 max-h-[70vh] overflow-y-auto text">
+                  <li class="border-b border-gray-400"><a href="https://gbanker.app:8248/Account/Login" target="_blank"
+                      class="text-gray-900 block px-3 py-3 hover:bg-gray-200 rounded-md transition-colors text-xl">GBANKER</a>
+                  </li>
+                  <li class="border-b border-gray-400"><a href="https://phrm.proyas.org/login" target="_blank"
+                      class="text-gray-900 block px-3 duration-300 py-3 hover:bg-gray-200 rounded-md text-xl  transition-all">PHRM
+                      Attendance</a></li>
+                  <li class="border-b border-gray-400"><a href="https://move.proyas.one/login" target="_blank"
+                      class="text-gray-900 block duration-300 px-3 py-3 hover:bg-gray-200 rounded-md text-xl transition-all">Movement</a>
+                  </li>
+                  <li class="border-b  border-gray-400"><a href="https://smp.proyas.org/login" target="_blank"
+                      class="text-gray-900 block duration-300 px-3 py-2 hover:bg-gray-200 rounded-md text-xl transition-all">SMP</a>
+                  </li>
+                  <li class="border-b border-gray-400"><a href="https://smph.proyas.org/login" target="_blank"
+                      class="text-gray-900 block duration-300 px-3 py-2 hover:bg-gray-200 rounded-md text-xl transition-all">SMPH</a>
+                  </li>
+                  <li class="border-b border-gray-400"><a href="https://alfu.proyas.org/login" target="_blank"
+                      class="text-gray-900 block duration-300 px-3 py-2 hover:bg-gray-200 rounded-md text-xl transition-all">ALFU</a>
+                  </li>
+                  <li class="border-b  border-gray-400"><a href="https://farm.proyas.one/login" target="_blank"
+                      class="text-gray-900 block duration-300 px-3 py-2  hover:bg-gray-200 rounded-md text-xl  transition-all">Agricultural</a>
+                  </li>
+                  <li class="border-b border-gray-400"><a href="http://4.194.76.187/ems/demo/app/login" target="_blank"
+                      class="text-gray-900 block duration-300 px-3 py-2 hover:bg-gray-200 rounded-md text-xl
+                       transition-all">EMS</a>
+                  </li>
+                  <ul>
+                    <li class="border-b border-gray-400">
+                      <a id="loanToggle"
+                        class="text-gray-900 block duration-300 px-3 py-2 transition-all hover:bg-gray-200 rounded-md text-xl">
+                        Loan Proposal
+                      </a>
+                  
+                      <!-- Dropdown Submenu -->
+                      <ul id="loanSubmenu" class="hidden ml-4 mt-2 space-y-1">
+                        <li>
+                          <a href="um.html" class="block px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded text-gray-800 text-base">UM</a>
+                        </li>
+                        <li>
+                          <a href="rm.html" class="block px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded text-gray-800 text-base">RM</a>
+                        </li>
+                        <li>
+                          <a href="zm.html" class="block px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded text-gray-800 text-base">ZM</a>
+                        </li>
+                      </ul>
+                    </li>
+                  
+                    <li class="border-b border-gray-400">
+                      <a href="ems1.html" target="_blank"
+                        class="text-gray-900 block duration-300 px-3 py-2 transition-all hover:bg-gray-200 rounded-md text-xl">
+                        Pharmacy
+                      </a>
+                    </li>
+                    <script>
+    document.getElementById('loanToggle').addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // ✅ Prevent sidebar toggle event
+                    const submenu = document.getElementById('loanSubmenu');
+                    submenu.classList.toggle('hidden');
+                    });
+                    
+                    </script>
+                
+                    
+                  
+                    <li class="border-b border-gray-400">
+                      <a href="https://portal.proyashospital.com/login"
+                        class="text-gray-900 block duration-300 px-3 py-2 transition-all hover:bg-gray-200 rounded-md text-xl">
+                        Hospital
+                      </a>
+                    </li>
+                  </ul>
+                  
+                  <li class="border-b border-gray-400"><a href="https://gourbangla.com/" target="_blank"
+                      class="text-gray-900 block duration-300 px-3 py-2  hover:bg-gray-200 rounded-md text-xl  transition-all">Gour
+                      bangla</a></li>
+                  <li class="border-b border-gray-400"><a href="https://radiomahananda.com/" target="_blank"
+                      class="text-gray-900 block duration-300 px-3 py-2 hover:bg-gray-200 rounded-md text-xl transition-all">radio
+                      mahananda</a></li>
+                  <li class="border-b border-gray-400"><a href="https://supershop.proyas.org/login" target="_blank"
+                      class="text-gray-900 block duration-300 px-3 py-2 hover:bg-gray-200 rounded-md text-xl transition-all">Super
+                      Shop</a></li>
+                  <li class="border-b border-gray-400"><a href="https://task.proyas.one/" target="_blank"
+                      class="text-gray-900 block duration-300 px-3 py-2  hover:bg-gray-200 rounded-md text-xl transition-all">Task
+                      Management</a></li>
+                </ul>
+              </div>
+            </div>
+         
+          
+            <!-- Logo -->
+            <div id="logoImg" class="flex-shrink-0 w-32 md:w-[250px] transition-transform duration-1000 transform  rounded-md ml-0 sm:ml-4">
+              <img class="h-12 w-full  rounded-md object-contain" src="proyas.jpeg-removebg-preview.png" alt="Logo">
+            </div>
+            </div>
+            
+            <!-- Center Section (Clock) -->
+            <div class="order-3 sm:order-none text-gray-900 text-center sm:text-left">
+              <div id="digitalClock" class="text-lg px-1  font-semibold">00:00:00</div>
+              <div id="date" class="text-sm">Loading date...</div>
+                </div>
+                     </div>
+                         </div>
+               </nav>
+            <!-- nav end -->
+            
+            
+            <!-- main start -->
+            
+            <main id="leftSide-2" class="max-w-7xl mx-auto mt-30 px-4 py-6 sm:px-6 lg:px-8 transition-all duration-1000 ease-out transform">
+              <!-- Service Panels -->
+              <section class="space-y-8">
+            
+                <div
+                  class="glass-panel bg-gradient-to-br from-purple-100 via-blue-100 to-pink-100 p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow">
+                  <!-- <div class="flex items-center gap-3 mb-6">
+            
+              
+              </div> -->
+                  <h2
+                    class="text-3xl font-bold bg-gradient-to-r from-purple-900 text-center mb-5 to-blue-900 bg-clip-text text-transparent">
+                    Proyas All
+                    Software</h2>
+            
+                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            
+                    <!-- Movement Link -->
+                    <a href="https://move.proyas.one/login" target="_blank"
+                      class="service-link group transform hover:scale-[1.02] transition-all">
+                      <div
+                        class="flex items-center justify-between p-4 bg-gradient-to-br from-purple-600 to-blue-500 backdrop-blur-sm rounded-lg hover:shadow-xl hover:shadow-purple-500/30 transition-all">
+                        <div class="text-center w-full">
+                          <h3
+                            class="text-2xl text-center font-semibold bg-gradient-to-r from-purple-100 to-blue-100 bg-clip-text text-transparent">
+                            Movement</h3>
+                        </div>
+                      </div>
+                    </a>
+            
+                    <!-- PHRM Attendance -->
+                    <a href="https://phrm.proyas.org/login" target="_blank"
+                      class="service-link group transform hover:scale-[1.02] transition-all">
+                      <div
+                        class="flex items-center justify-between p-4 bg-gradient-to-br from-cyan-600 to-sky-500 backdrop-blur-sm rounded-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all">
+                        <div class="text-center w-full">
+                          <h3 class="text-2xl font-bold bg-gradient-to-r from-cyan-100 to-sky-100 bg-clip-text text-transparent">
+                            PHRM Attendance</h3>
+                        </div>
+                      </div>
+                    </a>
+            
+                    <!-- Agricultural -->
+                    <a href="https://farm.proyas.one/login" target="_blank"
+                      class="service-link group transform hover:scale-[1.02] transition-all">
+                      <div
+                        class="flex items-center justify-between p-4 bg-gradient-to-br from-emerald-600 to-green-500 backdrop-blur-sm rounded-lg hover:shadow-xl hover:shadow-emerald-500/30 transition-all">
+                        <div class="text-center w-full">
+                          <h3
+                            class="text-2xl font-semibold bg-gradient-to-r from-emerald-100 to-green-100 bg-clip-text text-transparent">
+                            Agricultural</h3>
+                        </div>
+                      </div>
+                    </a>
+            
+                    <!-- Task Management -->
+                    <a href="https://task.proyas.one/" target="_blank"
+                      class="service-link group transform hover:scale-[1.02] transition-all">
+                      <div
+                        class="flex items-center justify-between p-4 bg-gradient-to-br from-rose-600 to-pink-500 backdrop-blur-sm rounded-lg hover:shadow-xl hover:shadow-rose-500/30 transition-all">
+                        <div class="text-center w-full">
+                          <h3
+                            class="text-2xl font-semibold bg-gradient-to-r from-rose-100 to-pink-100 bg-clip-text text-transparent">
+                            Task Management</h3>
+                        </div>
+                      </div>
+                    </a>
+            
+                    <!-- GBANKER -->
+                    <a href="https://gbanker.app:8248/Account/Login" target="_blank"
+                      class="service-link group transform hover:scale-[1.02] transition-all">
+                      <div
+                        class="flex items-center justify-between p-4 bg-gradient-to-br from-teal-600 to-cyan-500 backdrop-blur-sm rounded-lg hover:shadow-xl hover:shadow-teal-500/30 transition-all">
+                        <div class="text-center w-full">
+                          <h3
+                            class="text-2xl font-semibold bg-gradient-to-r from-teal-100 to-cyan-100 bg-clip-text text-transparent">
+                            GBANKER</h3>
+                        </div>
+                      </div>
+                    </a>
+            
+                    <!-- SMP -->
+                    <a href="https://smp.proyas.org/login" target="_blank"
+                      class="service-link group transform hover:scale-[1.02] transition-all">
+                      <div
+                        class="flex items-center justify-between p-4 bg-gradient-to-br from-indigo-600 to-violet-500 backdrop-blur-sm rounded-lg hover:shadow-xl hover:shadow-indigo-500/30 transition-all">
+                        <div class="text-center w-full">
+                          <h3
+                            class="text-2xl font-semibold bg-gradient-to-r from-indigo-100 to-violet-100 bg-clip-text text-transparent">
+                            SMP</h3>
+                        </div>
+                      </div>
+                    </a>
+            
+                    <!-- SMPH -->
+                    <a href="https://smph.proyas.org/login" target="_blank"
+                      class="service-link group transform hover:scale-[1.02] transition-all">
+                      <div
+                        class="flex items-center justify-between p-4 bg-gradient-to-br from-fuchsia-600 to-purple-500 backdrop-blur-sm rounded-lg hover:shadow-xl hover:shadow-fuchsia-500/30 transition-all">
+                        <div class="text-center w-full">
+                          <h3
+                            class="text-2xl font-semibold bg-gradient-to-r from-fuchsia-100 to-purple-100 bg-clip-text text-transparent">
+                            SMPH</h3>
+                        </div>
+                      </div>
+                    </a>
+            
+                    <!-- ALFU -->
+                    <a href="https://alfu.proyas.org/login" target="_blank"
+                      class="service-link group transform hover:scale-[1.02] transition-all">
+                      <div
+                        class="flex items-center justify-between p-4 bg-gradient-to-br from-orange-600 to-amber-500 backdrop-blur-sm rounded-lg hover:shadow-xl hover:shadow-orange-500/30 transition-all">
+                        <div class="text-center w-full">
+                          <h3
+                            class="text-2xl font-semibold bg-gradient-to-r from-orange-100 to-amber-100 bg-clip-text text-transparent">
+                            ALFU</h3>
+                        </div>
+                      </div>
+                    </a>
+            
+                    <!-- Super Shop -->
+                    <a href="https://supershop.proyas.org/login" target="_blank"
+                      class="service-link group transform hover:scale-[1.02] transition-all">
+                      <div
+                        class="flex items-center justify-between px-4 py-7 bg-gradient-to-br from-sky-600 to-blue-500 backdrop-blur-sm rounded-lg hover:shadow-xl hover:shadow-sky-500/30 transition-all">
+                        <div class="text-center w-full">
+                          <h3
+                            class="text-2xl font-semibold bg-gradient-to-r from-sky-100 to-blue-100 bg-clip-text text-transparent">
+                            Super Shop</h3>
+                        </div>
+                      </div>
+                    </a>
+
+                    <!-- loan proposal -->
+                    <div 
+                      class="service-link group transform hover:scale-[1.02] transition-all">
+                      <div
+                        class="flex items-center justify-between p-4 bg-gradient-to-br from-sky-600 to-green-500 backdrop-blur-sm rounded-lg hover:shadow-xl hover:shadow-sky-500/30 transition-all">
+                        <div class="text-center w-full">
+                          <h3
+                            class="text-2xl font-semibold bg-gradient-to-r from-sky-100 to-blue-100 bg-clip-text text-transparent">
+                            Loan Proposal </h3>
+                            <div class="relative inline-block">
+                              <!-- RM Button -->
+                              <button id="rmButton"
+                                class="px-2 font-semibold text-lg bg-gradient-to-br from-sky-600 to-green-500 backdrop-blur-sm text-white shadow-sm rounded">
+                                RM
+                              </button>
+                            
+                              <!-- Dropdown menu -->
+                              <div id="rmDropdown" class="hidden absolute z-10 mt-2 w-[250px] sm:w-[300px] md:w-[500px] lg:w-[600px] bg-white rounded shadow-lg">
+                                <ul class="text-gray-800 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 p-2">
+                              
+                                  <li><a href="https://loanapp.proyas.one/new/"
+                                      class="block  text-center w-full px-6 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded cursor-pointer font-medium">BHABANIGANJ</a>
+                                  </li>
+                                  <li><a href="https://loanapp.proyas.one/new/"
+                                      class="block text-center w-full px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded cursor-pointer font-medium">CHAPAISADAR</a>
+                                  </li>
+                                  <li><a href="https://loanapp.proyas.one/new/"
+                                      class="block text-center w-full px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded cursor-pointer font-medium">GOMOSTAPUR</a>
+                                  </li>
+                                  <li><a href="https://loanapp.proyas.one/new/"
+                                      class="block text-center w-full px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded cursor-pointer font-medium">NAOGAON</a>
+                                  </li>
+                                  <li><a href="https://loanapp.proyas.one/new/"
+                                      class="block text-center w-full px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded cursor-pointer font-medium">NATUNHAT</a>
+                                  </li>
+                                  <li><a href="https://loanapp.proyas.one/new/"
+                                      class="block text-center w-full px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded cursor-pointer font-medium">PABA</a>
+                                  </li>
+                                  <li><a href="https://loanapp.proyas.one/new/"
+                                      class="block text-center w-full px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded cursor-pointer font-medium">PORSHA</a>
+                                  </li>
+                                  <li><a href="https://loanapp.proyas.one/new/"
+                                      class="block text-center w-full px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded cursor-pointer font-medium">RAJSHAHI</a>
+                                  </li>
+                                  <li><a href="https://loanapp.proyas.one/new/"
+                                      class="block text-center w-full px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded cursor-pointer font-medium">RANIHATI</a>
+                                  </li>
+                                  <li><a href="https://loanapp.proyas.one/new/"
+                                      class="block text-center w-full px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded cursor-pointer font-medium">SHIBGANJ</a>
+                                  </li>
+                                  <li><a href="https://loanapp.proyas.one/new/"
+                                      class="block text-center w-full px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded cursor-pointer font-medium">ATRAI</a>
+                                  </li>
+                                  <li><a href="https://loanapp.proyas.one/new/"
+                                      class="block text-center w-full px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded cursor-pointer font-medium">JOYPURHAT</a>
+                                  </li>
+                                  <li><a href="https://loanapp.proyas.one/new/"
+                                      class="block text-center w-full px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded cursor-pointer font-medium">BOGURA-SHIBGANJ</a>
+                                  </li>
+                                  <li><a href="#"
+                                      class="block text-center w-full px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded cursor-pointer font-medium">MAHADEVPUR</a>
+                                  </li>
+                              
+                                </ul>
+                              </div>
+                              
+                              
+                              
+                              
+                            </div>
+                            
+                            <!-- Other Buttons -->
+                            
+                            <a href="https://loanapp.proyas.one/new/" target="_blank">
+                              <button
+                                class="px-2 font-semibold text-lg bg-gradient-to-br from-sky-600 to-green-500 backdrop-blur-sm text-white shadow-sm rounded">UM</button>
+                            </a>
+                            <a href="https://loanapp.proyas.one/new/" target="_blank">
+                              <button
+                                class="px-2 font-semibold text-lg bg-gradient-to-br from-sky-600 to-green-500 backdrop-blur-sm text-white shadow-sm rounded">ZM</button>
+                            </a>
+                           
+                            
+                            <!-- Script -->
+                            <script>
+                              const rmButton = document.getElementById("rmButton");
+                              const rmDropdown = document.getElementById("rmDropdown");
+
+                              rmButton.addEventListener("click", () => {
+                                rmDropdown.classList.toggle("hidden");
+                              });
+
+                              // Optional: Close dropdown if clicked outside
+                              document.addEventListener("click", (event) => {
+                                if (!rmButton.contains(event.target) && !rmDropdown.contains(event.target)) {
+                                  rmDropdown.classList.add("hidden");
+                                }
+                              });
+                            </script>
+                            
+                          
+                      </div>
+                    </div>
+                    <!-- <script>
+                      const rmButton = document.getElementById("rmButton");
+                      const rmDropdown = document.getElementById("rmDropdown");
+
+                      rmButton.addEventListener("click", () => {
+                        rmDropdown.classList.toggle("hidden");
+                      });
+
+                      // Optional: Close dropdown if clicked outside
+                      document.addEventListener("click", (event) => {
+                        if (!rmButton.contains(event.target) && !rmDropdown.contains(event.target)) {
+                          rmDropdown.classList.add("hidden");
+                        }
+                      });
+                    </script> -->
+                  </div>
+
+                </div>
+                </div>
+            
+                <!-- proyas it system start-->
+            
+                <div
+                  class="glass-panel bg-gradient-to-br from-blue-100 to-red-100 p-8 mt-5 rounded-xl shadow-sm hover:shadow-xl transition-shadow">
+                  <!-- <div class="flex-col sm:flex sm:flex-row items-center gap-3 mb-6">
+                        <div class="w-52 h-12 bg-white mb-3 flex items-center justify-center shadow-md rounded-sm hover:shadow-xl">
+                       
+                          <img src="proyasIT (1).png" alt="">
+            
+                        </div>
+            
+                      </div> -->
+                  <h2 class="text-3xl font-bold text-gray-900 text-center mb-5">Proyas IT Software</h2>
+            
+                  <!-- new edit area proyas it -->
+            
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            
+                    <!-- EMS - Purple Gradient -->
+                    <a href="http://4.194.76.187/ems/demo/app/login" target="_blank" class="service-link group">
+                      <div
+                        class="p-4 bg-gradient-to-r from-purple-700 via-purple-600 to-purple-500 rounded-lg hover:bg-gradient-to-l transition-all hover:shadow-sm">
+                        <div class="flex flex-col items-center gap-3">
+                          <div
+                            class="w-[120px] h-16 bg-gray-50 rounded-md flex items-center justify-center shadow-md hover:shadow-xl hover:ring-2 hover:ring-purple-400">
+                            <img src="emsProyas.png" alt="EMS Logo" class="w-full h-full rounded-md">
+                          </div>
+                          <h3 class="text-xl font-semibold text-gray-100 group-hover:text-white text-center">Education Management
+                            System</h3>
+                        </div>
+                      </div>
+                    </a>
+            
+                    <!-- Pharmacy - Blue Gradient -->
+                    <a href="ems1.html" target="_blank" class="service-link group">
+                      <div
+                        class="p-4 bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 rounded-lg hover:bg-gradient-to-l  transition-all hover:shadow-md ">
+                        <div class="flex flex-col items-center gap-3">
+                          <div
+                            class="w-[120px] h-16 bg-gray-50 rounded-md flex items-center justify-center shadow-md hover:shadow-xl hover:ring-2 hover:ring-cyan-400">
+                            <img src="Proyas-Pharma-Logo.png" alt="Pharmacy Logo" class="w-full h-full ">
+                          </div>
+                          <h3 class="text-xl font-semibold text-gray-100 group-hover:text-white text-center">Pharmacy</h3>
+                        </div>
+                      </div>
+                    </a>
+            
+                    <!-- Hospital - Red Gradient -->
+                    <a href="https://portal.proyashospital.com/login" target="_blank" class="service-link group">
+                      <div
+                        class="p-4 bg-gradient-to-r from-red-700 via-red-600 to-red-500 rounded-lg hover:bg-gradient-to-l transition-all">
+                        <div class="flex flex-col items-center gap-3">
+                          <div
+                            class="w-[120px] h-16 bg-gray-50 rounded-md flex items-center justify-center shadow-md hover:shadow-xl hover:ring-2 hover:ring-orange-400">
+                            <img src="Proyas-Hospital.png" alt="Hospital Logo" class="w-full h-full rounded-md">
+                          </div>
+                          <h3 class="text-xl font-semibold text-gray-100 group-hover:text-white text-center">Hospital</h3>
+                        </div>
+                      </div>
+                    </a>
+            
+                    <!-- IT Website - Teal Gradient -->
+                    <a href="https://proyasit.com/" target="_blank" class="service-link group">
+                      <div
+                        class="p-4 bg-gradient-to-r from-teal-700 via-teal-600 to-teal-500 rounded-lg hover:bg-gradient-to-l transition-all ">
+                        <div class="flex flex-col items-center gap-3">
+                          <div
+                            class="w-[120px] h-16 bg-gray-50 rounded-md flex items-center justify-center shadow-md hover:shadow-xl hover:ring-2 hover:ring-emerald-400">
+                            <img src="proyasIT (1).png" alt="IT Logo" class="w-full h-full rounded-md">
+                          </div>
+                          <h3 class="text-xl font-semibold text-gray-100 group-hover:text-white text-center">Proyas IT Website</h3>
+                        </div>
+                      </div>
+                    </a>
+            
+                    <!-- Radio Mahananda - Pink Gradient -->
+                    <a href="https://radiomahananda.com/" target="_blank" class="service-link group">
+                      <div
+                        class="p-4 bg-gradient-to-r from-pink-700 via-pink-600 to-pink-500 rounded-lg hover:bg-gradient-to-l transition-all ">
+                        <div class="flex flex-col items-center gap-3">
+                          <div
+                            class="w-[120px] h-16 bg-gray-50 rounded-md flex items-center justify-center shadow-md hover:shadow-xl hover:ring-2 hover:ring-rose-400">
+                            <img src="Logo For Adabe Primer pro.png" alt="Radio Logo" class="w-full h-full rounded-md">
+                          </div>
+                          <h3 class="text-xl font-semibold text-gray-100 group-hover:text-white text-center">Radio Mahananda</h3>
+                        </div>
+                      </div>
+                    </a>
+            
+                    <!-- Gour Bangla - Amber Gradient -->
+                    <a href="https://gourbangla.com/" target="_blank" class="service-link group">
+                      <div
+                        class="p-4 bg-gradient-to-r from-amber-700 via-amber-600 to-amber-500 rounded-lg hover:bg-gradient-to-l transition-all ">
+                        <div class="flex flex-col items-center gap-3">
+                          <div
+                            class="w-[120px] h-16 bg-gray-50 rounded-md flex items-center justify-center shadow-md hover:shadow-xl hover:ring-2 hover:ring-yellow-400">
+                            <img src="Proyas-Agro-Logo-BN.png" alt="Gour Bangla Logo" class="w-full h-full">
+                          </div>
+                          <h3 class="text-xl font-semibold text-gray-100 group-hover:text-white text-center">Gour Bangla</h3>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+            
+                </div>
+                <!-- new edit area end proyas it -->
+            
+            
+            
+            
+                </div>
+              </section>
+            </main>
+       </section>
+      
+  <script src="script.js"></script>
+
+</body>
+</html> 
